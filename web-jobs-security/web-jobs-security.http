@@ -1,0 +1,6 @@
+@web_jobs_security_HostAddress = http://localhost:5272
+
+GET {{web_jobs_security_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
