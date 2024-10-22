@@ -20,18 +20,28 @@ namespace web_jobs_security.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> Get() {
+        public async Task<ActionResult> Get()
+        {
             return Ok(await _userService.getAll());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> GetById(int id){
+        public async Task<ActionResult> GetById(int id)
+        {
             return Ok(await _userService.getUserById(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(User user) {
+        public async Task<IActionResult> Post(User user)
+        {
             return Ok(await _userService.save(user));
         }
+
+        // [HttpPut("{id}")]
+        // public async Task<IActionResult> Put(int id, User user)
+        // {
+
+        // }
+
     }
 }
